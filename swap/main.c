@@ -13,6 +13,10 @@ int main(){
 
   printf("a = %d, b = %d\n", a, b);
 
+  swap_ref(&a, &b);
+
+  printf("a = %d, b = %d\n", a, b);
+
   return 0;
 }
 
@@ -20,7 +24,12 @@ void swap_val(int a, int b){
   printf("swapping a and b...\n");
   int temp = a;
   a = b;
-  b = temp;  
+  b = temp;
 }
 
-void swap_ref(int *x, int *y){}
+void swap_ref(int *x, int *y){
+  printf("actually swapping a and b...\n");
+  int temp = *x;
+  *x = *y;
+  *y = temp;
+}
