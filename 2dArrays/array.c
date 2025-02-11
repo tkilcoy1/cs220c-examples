@@ -14,9 +14,5 @@ int main(){
   int j = 4;
   printf("ary[%d][%d] = %d\n", i,j,ary[i][j]);
 
-  int * rary[2];
-  rary[0] = malloc(3*sizeof(int));
-  rary[1] = malloc(2*sizeof(int));
-
   return 0;
 }
