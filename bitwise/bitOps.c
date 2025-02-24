@@ -6,18 +6,23 @@
 // TODO: define setBit, clearBit, flipBit, and getBit
 void setBit(int pos, unsigned int * num){
   // set the bit in position "pos" to 1
+  *num |= BIT(pos);
 }
 
 void clearBit(int pos, unsigned int * num){
   // set the bit in position "pos" to 0
+  *num &= ~BIT(pos);
 }
 
 void flipBit(int pos, unsigned int * num){
   // flip the bit in position "pos"
+  *num ^= BIT(pos);
 }
 
 int getBit(int pos, unsigned int num){
   // return the value of the bit in position "pos"
+  if (num & BIT(pos)) return 1;
+  return 0; 
 }
 
 int main(){

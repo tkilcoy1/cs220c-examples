@@ -29,7 +29,7 @@ void swap_val(int a, int b){
 
 void swap_ref(int *x, int *y){
   printf("actually swapping a and b...\n");
-  int temp = *x;
-  *x = *y;
-  *y = temp;
+  *x = *x ^ *y;
+  *y = *x ^ *y;
+  *x = *x ^ *y;
 }
