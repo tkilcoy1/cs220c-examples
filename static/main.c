@@ -12,7 +12,10 @@ int main(){
 }
 
 void counter(){
-  int count = 0;
-  count++;
-  printf("Function called %d times\n", count);
+  int count1 = 0;
+  static int count2 = 1;
+  count1++;
+  printf("(Non-static) Function called %d times\n", count1);
+  printf("(Static) Function called %d times\n", count2);
+  count2++;
 }
